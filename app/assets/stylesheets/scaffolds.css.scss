@@ -1,0 +1,140 @@
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+
+
+  .ui-corner-all
+        {
+            -moz-border-radius: 4px 4px 4px 4px;
+        }
+        .ui-widget-content
+        {
+            border: 1px solid black;
+            color: black;
+            background-color: white;
+        }
+        .ui-widget
+        {
+            font-family: Verdana,Arial,sans-serif;
+            font-size: 15px;
+        }
+        .ui-menu
+        {
+            display: block;
+            float: left;
+            list-style: none outside none;
+            margin: 0;
+            padding: 2px;
+        }
+        .ui-autocomplete
+        {
+            cursor: default;
+            position: absolute;
+        }
+        .ui-menu .ui-menu-item
+        {
+            clear: left;
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .ui-menu .ui-menu-item a
+        {
+            display: block;
+            padding: 3px 3px 3px 3px;
+            text-decoration: none;
+            cursor: pointer;
+            background-color: Green;
+        }
+        .ui-menu .ui-menu-item a:hover
+        {
+            display: block;
+            padding: 3px 3px 3px 3px;
+            text-decoration: none;
+            color: grey;
+            cursor: pointer;
+            background-color: ButtonText;
+        }
+        .ui-widget-content a
+        {
+            color: grey;
+        }
+
+        .ui-helper-hidden-accessible
+        {
+          display: none;
+        }
+
+
+.flash{
+  align: center;
+  background-color: lightblue;
+}

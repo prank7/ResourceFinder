@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @identity.provider %>
+</p>
+
+<p>
+  <strong>Uid:</strong>
+  <%= @identity.uid %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @identity.user %>
+</p>
+
+<p>
+  <strong>Oauth token:</strong>
+  <%= @identity.oauth_token %>
+</p>
+
+<p>
+  <strong>Oauth expires at:</strong>
+  <%= @identity.oauth_expires_at %>
+</p>
+
+<%= link_to 'Edit', edit_identity_path(@identity) %> |
+<%= link_to 'Back', identities_path %>

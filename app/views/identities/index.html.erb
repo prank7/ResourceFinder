@@ -1,0 +1,35 @@
+<h1>Listing identities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Provider</th>
+      <th>Uid</th>
+      <th>User</th>
+      <th>Oauth token</th>
+      <th>Oauth expires at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @identities.each do |identity| %>
+      <tr>
+        <td><%= identity.provider %></td>
+        <td><%= identity.uid %></td>
+        <td><%= identity.user %></td>
+        <td><%= identity.oauth_token %></td>
+        <td><%= identity.oauth_expires_at %></td>
+        <td><%= link_to 'Show', identity %></td>
+        <td><%= link_to 'Edit', edit_identity_path(identity) %></td>
+        <td><%= link_to 'Destroy', identity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Identity', new_identity_path %>

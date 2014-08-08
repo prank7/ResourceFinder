@@ -1,0 +1,25 @@
+
+<div class="row">
+<table>
+  <thead>
+    <tr>
+      <th width="300">Name</th>
+      <th width="100">Type</th>
+      <th width="250">Course</th>
+      <th width="200">Category</th>
+      <th width="160">Who Has</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @resources.each do |resource| %>
+    <tr>
+      <td><%= resource.name %></td>
+      <td><%= resource.contentType %></td>
+      <td><%= resource.course %></td>
+      <td><%= resource.category %></td>
+      <td><%= User.find(resource.user_id).name %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

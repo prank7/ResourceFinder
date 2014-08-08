@@ -1,0 +1,44 @@
+
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/">Find Resource</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+
+    <ul class="right">
+      <% if signed_in? %>
+      <li class="has-dropdown">
+        <a href="#"><%= current_user.name %></a>
+        <ul class="dropdown">
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </li>
+      <% else %>
+           <a href="#" data-reveal-id="myModal" class="button success radius">Sign In</a>
+
+           <div id="myModal" class="reveal-modal tiny" data-reveal>
+            <h4 class="small-centered"> Please Sign in</h4></hr>
+            <%= link_to 'Sign in With Google', '/auth/google_oauth2', class: 'button alert expand round' %>
+            <%= link_to 'Sign in With Github', '/auth/github', class: 'button expand round' %>
+          </div>
+      <% end %>
+      
+    </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="has-form">
+        <%= form_tag url_for(:controller => :resources, :action => :search), class: 'large-12 columns', :remote => true , :method => 'get' do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search for Resources" %>
+      <%= submit_tag "Search", style: 'display: none' %>
+  <% end %>
+      </li>
+    </ul>
+  </section>
+</nav>

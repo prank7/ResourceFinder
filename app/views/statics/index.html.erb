@@ -1,0 +1,34 @@
+<!-- Renders the top navigation bar -->
+<%= render 'navbar' %>
+<div class="fullwrap">
+<div class="row">
+</div>
+
+<% if signed_in? %>
+<div class="row">
+	<div class="panel clearfix">
+	<%= form_tag url_for(:controller => :resources, :action => :search), class: 'large-6 columns', :remote => true , :method => 'get' do %>
+	    <%= text_field_tag :search, params[:search], placeholder: "Search for Resources" %>
+	    <%= submit_tag "Search", style: 'display: none' %>
+	<% end %>
+		    
+    <a href="#" data-reveal-id="addResource" class="button success radius right inline">Add Resource</a>
+
+           <div id="addResource" class="reveal-modal large" data-reveal>
+           	<%= render 'form' %>
+            
+          </div>
+	</div>
+</div>
+<div class="row flash alert-box info radius" style="display:none; text-align: center; font-size: 2em;">
+</div>
+<div class="resources">
+	<%= render 'resources', resources: (@resources = Resource.all)  %>
+</div>
+<% else %>
+<div class="resources">
+	
+</div>
+<% end %>
+</div>
+

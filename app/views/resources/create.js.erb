@@ -1,0 +1,4 @@
+$( '.button' ).click();
+$('.flash').css("display","block")
+$('.flash').html("New Resource Added! Thanks")
+$('.resources').html("<%= escape_javascript render(file: '/statics/_resources.html.erb', resources: @resources) %>");
